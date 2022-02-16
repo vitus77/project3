@@ -12,7 +12,7 @@
         <a
           class="nav-link active"
           aria-current="page"
-          href="http://predict-apt-price.herokuapp.com"
+          href="http://180.229.221.25:5432"
           >Home</a
         >
         <a
@@ -25,6 +25,7 @@
     </nav>
     <div class="container">
       <div class="text-center mt-5">
+        <br /><br /><br /><br /><br /><br /><br />
         <h1>Data Engineering Project</h1>
         <h2>아파트 거래가 예측</h2>
       </div>
@@ -402,20 +403,21 @@
       </div>
       <div class="text-center mt-5">
         <button class="navbar-toggler" type="submit" class="btn btn-light">
-          예측하기
+          예측하기<br /><br />
         </button>
       </div>
       <div class="text-center mt-5">
         {% if pred %}
-        <h1>아파트 예측 가격: {{(pred * 10000)|int}}원</h1>
+        <h1>예상 가격: {{'{:,}'.format(pred|int)}}원</h1>
         {% endif %}
       </div>
     </form>
+    <br /><br /><br /><br /><br /><br /><br /><br />
 
     <iframe
       src="http://180.229.221.25:3000/public/dashboard/d3c4aeaf-babe-4773-b0d8-07c42ccbb3bd"
       frameborder="0"
-      width="1920"
+      width="1850"
       height="1080"
       allowtransparency
     ></iframe>

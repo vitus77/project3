@@ -40,7 +40,7 @@ def index():
         columns = ['지역코드', '도시', '시군구', '법정동', '거래일', '아파트', '전용면적', '층', '건축년도'])
         pred = np.expm1(model.predict(df)[0])
 
-        return render_template('index.html', pred = pred)
+        return render_template('index.html', pred = pred*10000)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port = 5432)

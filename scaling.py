@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-data = pd.read_csv('data/Apart Deal.csv', low_memory=False)
+data = pd.read_csv('data/ApartDeal.csv', low_memory=False)
 
 data = data.sample(frac = 0.1)
 data = data.drop('지번', axis = 1)
